@@ -1,27 +1,87 @@
 @charset "utf-8";
 /* 스타일 초기화 */
 *, *::before, *::after{
+    box-sizing:border-box;
     margin: 0;
     padding: 0;
 }
-
+html{
+    font-size:10px;
+}
+ul{
+    list-style-type:none; 
+    /* reset css */
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+/* 숨김 콘텐츠 */
+.readable-hidden{
+    background: teal;
+    position: absoulte;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    margin:-1px;
+}
+/* 기본스타일 */
+body {
+    color:#181818;
+    font-size:1.4rem;
+}
+/* container */
+.container{
+    background: linear-gradient(to bottom, #ccc, #eee 50%, #fff 70%, #fff 100%);
+}
 .header, .visual, .main, .slogan ,.footer{
     background: yellow;
     width: 940px;
     margin: 0 auto;
 }
 .bg-footer{
-    background : purple;
+    background: linear-gradient(to bottom, #ccc, #eee 50%, #fff 70%, #fff 100%);
 }
 /* header logo */
 .header{
-    background-color: pink;
+    position: relative;
+    background-color: #fff;
+    padding: 0 30px 45px;
+    border-radius: 0 0 15px 15px;
 }
 .logo{
-    background-color: blue;
     position: absolute;
     top:45px;
     left:65px;
+}
+/* 안내링크 */
+.member{
+    text-align: right;
+    font-size:0;
+    padding: 2px 0;
+    margin-right: -10px;
+}
+.member li, .member a{
+    display: inline-block;
+}
+.member li{
+    font-size:1.4rem;
+    text-transform: uppercase;
+}
+.bar::before{
+    content: ":";
+    margin: 0 1px;
+}
+.member a{
+    padding: 5px 10px;
+}
+/* main menu */
+.menu{
+    /* background: repeating-linear-gradient(180degm, red, red 20px, green 20px, green 40px); */
+    background: #ffa830 linear-gradient(to bottom, #1e5799 0%,#ffa830 0%,#e5792b 39%,#ffa830 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    margin-top: 10px;
+    height: 45px;
 }
 /* 비주얼 */
 .visual{
@@ -33,12 +93,12 @@
     min-height: 450px;
     display:flex;
     justify-content: space-evenly;
+    flex-direction:row; 
     
 }
 .group1{
-    background:pink;
+    background-color: pink;
     width: 250px;
-    order:1;
 }
 .group2{
     background:pink;
