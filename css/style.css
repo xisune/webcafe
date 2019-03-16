@@ -1,7 +1,8 @@
 @charset "utf-8";
 /*@import url('https://fonts.googleapis.com/css?family=Song+Myung');*/
 /*@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css"); /*spoqa han sans*/
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+@import url("fontello.css");
 /* 스타일 초기화 */
 *, *::before, *::after{
     box-sizing:border-box;
@@ -41,7 +42,7 @@ body {
     color:#181818;
     font-size:1.4rem;
     /*font-family: 'Spoqa Han Sans', 'Sans-serif';*/
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Architects Daughter', cursive;
     font-weight:400;
     line-height:1.15;
 }
@@ -96,28 +97,94 @@ body {
     background: #ffa830 linear-gradient(to bottom, #1e5799 0%,#ffa830 0%,#e5792b 39%,#ffa830 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     margin-top: 10px;
     padding-left:225px;
+    border-top:2px solid #000;
+    border-radius: 0 0 5px 5px;
 }
 .menu >li {
     float: left;
+    position:relative;
 }
 .menu-item-text{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight:700;
     color:#fff;
     padding:1em 13px;
     display:block;
     border-left:1px solid #fff;
+    text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+}
+.menu-act .menu-item-text{
+    color: #ff0;
+    position: relative;
+}
+.menu-act .menu-item-text::after{
+    position: absolute;
+    width:calc(100% - 36px);
+    bottom:-2px;
+    content:"";
+    display:block;
+    border-top: 2px solid #000;
 }
 .sub-menu{
-    background:rgb(88, 88, 83);
     position:absolute;
+    white-space: nowrap; /*줄 바꿈 금지 */
+    top:55px;
     display:none;
 }
+.menu-act .sub-menu {
+    display: block;
+}
+.sub-menu1, .sub-menu, .sub-menu3{
+    left:0;
+}
+.sub-menu4 .sub-menu5 .sub-menu6{
+    right:0;
+}
 
+.sub-menu li, .sub-menu a{
+    display:inline-block;
+}
+.sub-menu a{
+    padding:8px 0;
+    margin-right:10px;
+}
 /* 비주얼 */
 .visual{
     height: 120px;
 }
+/*
+ * 애니메이션 시나리오
+ 이름: textAni
+ 1.글자크기 변화
+ 12px~24px(font-size)
+ 2.글자색상의 투명도
+ 투명~불투명(color)
+ color:rgba(0,0,0,0.5)000black, 0.5 불투명
+ 3.이동효과
+ 왼쪽 상단에서 오른쪽 하단
+ positoion, margin , padding
+*/
+@keyframes textAni{
+    0%{
+        font-size:12px;
+        color:rgba(0,0,0,0);
+        transform: translate(0,0)
+    }
+    100%{
+        font-size:24px;
+        color:rgba(0,0,0,1);
+        transform: translate(400px, 75px);
+    }
+}
+.visual-text{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    animation-name:textAni;
+    animation-duration:5s;
+    animation-fill-mode:forwards;
+    background:yellow;
+    width:545px;
+}
+
 /* main */
 .main{
     background:lime;
