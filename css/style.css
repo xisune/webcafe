@@ -1,4 +1,7 @@
 @charset "utf-8";
+/*@import url('https://fonts.googleapis.com/css?family=Song+Myung');*/
+/*@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css"); /*spoqa han sans*/
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 /* 스타일 초기화 */
 *, *::before, *::after{
     box-sizing:border-box;
@@ -26,17 +29,28 @@ a{
     clip: rect(0,0,0,0);
     margin:-1px;
 }
+/*클래스 모듈*/
+/*float 이슈를 해결하기 위한 clear기능*/
+.clearfix::after{
+    content:"";
+    display: block;
+    clear:both;
+}
 /* 기본스타일 */
 body {
     color:#181818;
     font-size:1.4rem;
+    /*font-family: 'Spoqa Han Sans', 'Sans-serif';*/
+    font-family: 'Permanent Marker', cursive;
+    font-weight:400;
+    line-height:1.15;
 }
 /* container */
 .container{
     background: linear-gradient(to bottom, #ccc, #eee 50%, #fff 70%, #fff 100%);
 }
 .header, .visual, .main, .slogan ,.footer{
-    background: yellow;
+    /*background: yellow;*/
     width: 940px;
     margin: 0 auto;
 }
@@ -81,8 +95,25 @@ body {
     /* background: repeating-linear-gradient(180degm, red, red 20px, green 20px, green 40px); */
     background: #ffa830 linear-gradient(to bottom, #1e5799 0%,#ffa830 0%,#e5792b 39%,#ffa830 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     margin-top: 10px;
-    height: 45px;
+    padding-left:225px;
 }
+.menu >li {
+    float: left;
+}
+.menu-item-text{
+    font-size: 1.8rem;
+    font-weight:700;
+    color:#fff;
+    padding:1em 13px;
+    display:block;
+    border-left:1px solid #fff;
+}
+.sub-menu{
+    background:rgb(88, 88, 83);
+    position:absolute;
+    display:none;
+}
+
 /* 비주얼 */
 .visual{
     height: 120px;
