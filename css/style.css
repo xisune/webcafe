@@ -1,7 +1,8 @@
 @charset "utf-8";
 /*@import url('https://fonts.googleapis.com/css?family=Song+Myung');*/
 /*@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css"); /*spoqa han sans*/
-@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+/*@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');*/
+@import url('https://fonts.googleapis.com/css?family=East+Sea+Dokdo');
 @import url("fontello.css");
 /* 스타일 초기화 */
 *, *::before, *::after{
@@ -40,9 +41,10 @@ a{
 /* 기본스타일 */
 body {
     color:#181818;
-    font-size:1.4rem;
+    font-size:1.6rem;
     /*font-family: 'Spoqa Han Sans', 'Sans-serif';*/
-    font-family: 'Architects Daughter', cursive;
+   /* font-family: 'Architects Daughter', cursive;*/
+    font-family: 'East Sea Dokdo', cursive;
     font-weight:400;
     line-height:1.15;
     background: linear-gradient(to bottom, #ccc, #eee 50%, #fff 70%, #fff 100%);
@@ -276,10 +278,10 @@ body {
 }
 .login-form label{
     display: inline-block;
-    width: 5em;
+    width: 3em;
 }
 .login-form input{
-    width: 95px;
+    width: 100px;
     height: 24px;
     border:1px solid #aaa;
     padding: 1px 1px 1px 5px;
@@ -295,7 +297,7 @@ body {
     padding: 0;
     font-size: 1.2rem;
     cursor: pointer;
-    width: 40px;
+    width: 50px;
     height: 54px;
 }
 .sign{
@@ -328,4 +330,60 @@ body {
 .validation-list a:hover,
 .validation-list a:focus{
     color: rgb(255, 0, 0);
+}
+/*웹 관련 용어*/
+.term{
+    border:1px solid #aaa;
+    border-radius: 5px;
+    background: #bbb linear-gradient(to bottom, #bbb, #eee);
+    padding: 10px 15px;
+}
+.term-heading{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.term-list{
+}
+.term-list > div{
+    margin-top: 10px;
+}
+
+
+/* 
+.term-list-subject2, .term-list-brief2{
+    width: 145px;
+    float: left;
+}
+.term-list-subject2{
+    color: #296897;
+}
+.term-list-thumbnail2{
+    float: right;
+}
+.term-list-thumbnail2 img{
+    vertical-align: middle;
+}
+.term-list-brief2{
+    margin-top: 5px;
+    line-height: 1.5;
+} */
+
+
+
+.term-list-subject, .term-list-brief{
+    width: 145px;
+    float: right;
+}
+.term-list-subject{
+    color: #296897;
+}
+.term-list-thumbnail{
+    float: left;
+}
+.term-list-thumbnail img{
+    vertical-align: middle;
+}
+.term-list-brief{
+    margin-top: 5px;
+    line-height: 1.5;
 }
