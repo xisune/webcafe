@@ -23,7 +23,7 @@ a{
 /* 숨김 콘텐츠 */
 .readable-hidden{
     background: teal;
-    position: absoulte;
+    position: absolute;
     width: 1px;
     height: 1px;
     overflow: hidden;
