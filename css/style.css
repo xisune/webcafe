@@ -228,22 +228,84 @@ body {
 
 /* main */
 .main{
-    background:lime;
+    background:#fff;
+    padding: 30px;
     min-height: 450px;
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction:row; 
-    
+    border-radius:15px 15px 0 0;
 }
 .group1{
-    background-color: pink;
     width: 250px;
 }
 .group2{
-    background:pink;
-    width: 350px;
+    width: 380px;
 }
 .group3{
-    background:pink;
     width:190px;
+}
+
+/*login*/
+.login{
+    background:#e5792b radial-gradient(circle at right top, #e5792b, #ff4e21);
+    border-radius: 5px;
+    padding: 5px;
+}
+.login-heading{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: rgb(255, 255, 0);
+    padding-left:10px;
+}
+.login-form{
+    background: rgb(255, 255, 255);
+    margin-top: 10px;
+    padding: 10px 10px 0 10px;
+    border-radius: 5px 5px 0 0;
+}
+.login-form fieldset{
+    border: 0;
+    position: relative;
+    border-bottom:1px solid #fff;
+}
+.user-pw{
+    margin-top: 5px;
+}
+.login-form label{
+    display: inline-block;
+    width: 5em;
+}
+.login-form input{
+    width: 95px;
+    height: 24px;
+    border:1px solid #aaa;
+    padding: 1px 1px 1px 5px;
+}
+.btn-login{
+    position: absolute;
+    top:0;
+    right: 0;
+    background: #ff4e21;
+    color: rgb(255, 255, 255);
+    border-radius: 3px;
+    border: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 40px;
+    height: 54px;
+}
+.sign{
+    background: rgb(255,255,255);
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 1.3rem;
+}
+.sign .icon-right-open::before{
+    color: #ed552f;
+    margin: 0;
+
 }
