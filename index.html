@@ -24,7 +24,7 @@
           <li class="bar"><a href="#">engilsh</a></li>
         </ul>     
         <nav class="navigation">
-          <h1 class="readable-hidden">메인메뉴</h1>
+          <h2 class="readable-hidden">메인메뉴</h2>
           <ul class="menu clearfix">
             <li class="menu-item menu-act" tabindex="0">
               <span class="menu-item-text">About HTML</span>
@@ -133,7 +133,34 @@
       </div>
       <div class="main">
         <!--div.group.group$*3 {content memo}-->
-        <div class="group group1"></div>
+        <div class="group group1">
+          <section class="login">
+            <h2 class="login-heading">login</h2>
+            <form action="https://formspree.io/jiseon0523@naver.com" method="POST" class="">
+            <fieldset>
+              <legend>회원 로그인 폼</legend>
+              <div class="user-email">
+                <!--lable+input#user-email-->
+                <label for="user-email">아이디</label>
+                <input type="email" id="user-email" name="id" required placeholder="e-mail address">
+              </div>
+              <div class="user-pw">
+                <label for="user-pw">비밀번호</label>
+                <input type="password" id="user-pw" name="password" required placeholder="more than 8 digit">
+              </div>
+              <button type="submit" class="btn-login">login</button>
+            </fieldset>
+            </form>
+            <ul class="sign">
+              <li>
+                <a href="#">sign</a>
+              </li>
+              <li>
+                <a href="#">id/pw find</a>
+              </li>
+            </ul>
+          </section>
+        </div>
         <div class="group group2"></div>
         <div class="group group3"></div>
       </div>
